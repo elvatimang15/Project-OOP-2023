@@ -29,7 +29,7 @@ public class HomeScene {
         StackPane root = new StackPane();
         root.getChildren().add(imageView);
 
-        Label nama = new Label("Masukan nama anda:");
+        Label nama = new Label("Masukan nama anda: ");
         nama.setFont(Font.font("Algerian", 13));
         TextField namaa = new TextField();
 
@@ -38,7 +38,7 @@ public class HomeScene {
         TextField nope = new TextField();
 
         Button masuk = new Button("Masuk");
-        masuk.setFont(Font.font("Algerian", 13));
+        masuk.setFont(Font.font("Algerian", 15));
         masuk.setOnAction(e -> {
             String inputNama = namaa.getText();
             namaa2 = inputNama;

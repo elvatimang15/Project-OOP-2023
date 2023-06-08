@@ -16,10 +16,7 @@ import javafx.util.Duration;
 
 public class Scene4 {
     private Label timerLabel;
-    private int waktu;
     private boolean isPlayed = false;
-    private String namaa2;
-    private int nope2;
 
     public void showScene4(Stage stage, String namaa2, int nope2, int waktu) {
         StackPane root = new StackPane();
@@ -40,8 +37,8 @@ public class Scene4 {
 
         Label nohp = new Label();
         nohp.setFont(Font.font("Algerian", 15));
-
         Button backtohome = new Button("Kembali Ke Halaman Utama");
+
         backtohome.setFont(Font.font("Algerian", 15));
         int hitungMundur = waktu * 60;
         final int[] hitungMundurRef = { waktu };
@@ -59,18 +56,16 @@ public class Scene4 {
             } else {
                 timerLabel.setText("Silahkan ambil pesanan Anda");
                 nama.setText("Atas nama : " + namaa2);
-                nohp.setText("No HP :" + nope2);
+                nohp.setText("No HP : " + nope2);
                 isPlayed = true;
                 backtohome.setOnAction(v -> {
                     HomeScene scene1 = new HomeScene(stage);
                     scene1.showScene1();
                 });
             }
-
         }));
         timeline.setCycleCount(hitungMundur);
         timeline.play();
-
         VBox vbox = new VBox(tunggu, timerLabel, nama, nohp, backtohome);
         root.getChildren().add(vbox);
         vbox.setAlignment(Pos.CENTER);
